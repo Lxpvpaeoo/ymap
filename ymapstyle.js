@@ -1,4 +1,3 @@
-
 initMap(
     'map',
     {
@@ -6987,7 +6986,7 @@ initMap(
           ]
         },
         style: {
-            stroke: [{width: 4, color: 'rgb(210, 210, 210)'}],
+            stroke: [{width: 2, color: 'rgb(210, 210, 210)'}],
             fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
@@ -7028,7 +7027,7 @@ initMap(
           ]
         },
         style: {
-            stroke: [{width: 4, color: 'rgb(210, 210, 210)'}],
+            stroke: [{width: 2, color: 'rgb(210, 210, 210)'}],
             fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
@@ -7103,14 +7102,48 @@ initMap(
         // входы
         
         // сектора
-        
+        // метка парковой зоны
+        const markerElementParkZone = document.createElement('div');
+        markerElementParkZone.className = 'marker-class-parkzone';
+        markerElementParkZoneinnerText = "Парковая зона'";
+    
+        const markerParkZone = new YMapMarker(
+          {
+            source: 'markerSource',
+            coordinates: [24.455309, 52.565287],
+            draggable: false,
+            mapFollowsOnDrag: false
+          },
+          markerElementParkZone
+        );
+    
+        map.addChild(markerParkZone);
+
+        //метка концертной зоны
+        const markerElementRockZone = document.createElement('div');
+        markerElementRockZone.className = 'marker-class-rockzone';
+        markerElementRockZoneinnerText = "Концертная зона'";
+    
+        const markerRockZone = new YMapMarker(
+          {
+            source: 'markerSource',
+            coordinates: [24.455051, 52.568092],
+            draggable: false,
+            mapFollowsOnDrag: false
+          },
+          markerElementRockZone
+        );
+    
+        map.addChild(markerRockZone);
+
+
         // туалеты
         
         // остальное
     
-        // метка лагеря дома на колесах
+        // метка сцены
     const markerElementRock = document.createElement('div');
-    markerElementRock.className = 'marker-class-Scene';
+    markerElementRock.className = 'marker-class-scene';
     markerElementRock.innerText = "Сцена'";
 
     const markerRock = new YMapMarker(
