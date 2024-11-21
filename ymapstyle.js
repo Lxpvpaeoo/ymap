@@ -1,3 +1,4 @@
+
 initMap(
     'map',
     {
@@ -7105,7 +7106,7 @@ initMap(
         // метка парковой зоны
         const markerElementParkZone = document.createElement('div');
         markerElementParkZone.className = 'marker-class-parkzone';
-        markerElementParkZoneinnerText = "Парковая зона'";
+        markerElementParkZone.innerText = "Парковая зона";
     
         const markerParkZone = new YMapMarker(
           {
@@ -7122,7 +7123,7 @@ initMap(
         //метка концертной зоны
         const markerElementRockZone = document.createElement('div');
         markerElementRockZone.className = 'marker-class-rockzone';
-        markerElementRockZoneinnerText = "Концертная зона'";
+        markerElementRockZone.innerText = "Концертная зона";
     
         const markerRockZone = new YMapMarker(
           {
@@ -7144,7 +7145,7 @@ initMap(
         // метка сцены
     const markerElementRock = document.createElement('div');
     markerElementRock.className = 'marker-class-scene';
-    markerElementRock.innerText = "Сцена'";
+    markerElementRock.innerText = "Сцена";
 
     const markerRock = new YMapMarker(
       {
