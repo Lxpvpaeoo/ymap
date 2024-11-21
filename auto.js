@@ -6898,7 +6898,7 @@ initMap(
         draggable: false,
         mapFollowsOnDrag: false
       },
-      markerElement
+      markerElementLogo
     );
 
     map.addChild(markerLogo);
