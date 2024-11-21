@@ -1,4 +1,3 @@
-
 initMap(
     'map',
     {
@@ -7048,7 +7047,7 @@ initMap(
     const marker = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.450652, 52.563891],
+        coordinates: [24.450899, 52.562274],
         draggable: false,
         mapFollowsOnDrag: false
       },
@@ -7066,7 +7065,7 @@ initMap(
     const markerSecond = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.454909, 52.562561],
+        coordinates: [24.453924, 52.563108],
         draggable: false,
         mapFollowsOnDrag: false
       },
@@ -7083,7 +7082,7 @@ initMap(
     const markerMotohome = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.475412, 52.569125],
+        coordinates: [24.476479, 52.568779],
         draggable: false,
         mapFollowsOnDrag: false
       },
@@ -7128,7 +7127,7 @@ initMap(
         const markerRockZone = new YMapMarker(
           {
             source: 'markerSource',
-            coordinates: [24.455051, 52.568092],
+            coordinates: [24.455488, 52.568196],
             draggable: false,
             mapFollowsOnDrag: false
           },
@@ -7150,7 +7149,7 @@ initMap(
     const markerRock = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.453809, 52.567655],
+        coordinates: [24.454143, 52.567581],
         draggable: false,
         mapFollowsOnDrag: false
       },
