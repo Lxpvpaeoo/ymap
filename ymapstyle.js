@@ -1,5 +1,5 @@
 
-  initMap(
+initMap(
     'map',
     {
       center: [24.466836, 52.565951],
@@ -6910,8 +6910,8 @@
           ]
         },
         style: {
-            stroke: [{width: 4, color: 'rgb(255, 237, 0)', dasharray: '10 10'}],
-            fill: 'rgba(255, 237, 0, 0.2)'
+            stroke: [{width: 2, color: 'rgb(0, 229, 255)'}],
+            fill: 'rgba(0, 229, 255, 0.3)'
         }
       });
 
@@ -6934,8 +6934,8 @@
           ]
         },
         style: {
-          stroke: [{width: 4, color: 'rgb(1, 190, 79)'}],
-          fill: 'rgba(1, 190, 79, 0.2)'
+          stroke: [{width: 2, color: 'rgb(1, 190, 79)'}],
+          fill: 'rgba(1, 190, 79, 0.3)'
         }
       });
 
@@ -6957,15 +6957,15 @@
           ]
         },
         style: {
-          stroke: [{width: 4, color: 'rgb(1, 190, 79)'}],
-          fill: 'rgba(1, 190, 79, 0.2)'
+          stroke: [{width: 4, color: 'rgb(255, 119, 0)'}],
+          fill: 'rgba(255, 119, 0, 0.3)'
         }
       });
 
       map.addChild(CampMotorhome);
     
     
-    // Зона фестиваля 
+    // Зона концерта 
     const polygonFest = new YMapFeature({
         id: 'fest-zone',
         source: 'featureSource',
@@ -6987,8 +6987,8 @@
           ]
         },
         style: {
-            stroke: [{width: 4, color: 'rgb(255, 237, 0)'}],
-            fill: 'rgba(255, 237, 0, 0.2)'
+            stroke: [{width: 4, color: 'rgb(210, 210, 210)'}],
+            fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
 
@@ -7028,8 +7028,8 @@
           ]
         },
         style: {
-            stroke: [{width: 4, color: 'rgb(255, 237, 0)'}],
-            fill: 'rgba(255, 237, 0, 0.2)'
+            stroke: [{width: 4, color: 'rgb(210, 210, 210)'}],
+            fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
 
@@ -7042,7 +7042,7 @@
     
     // метка лагеря озерный
     const markerElement = document.createElement('div');
-    markerElement.className = 'marker-class';
+    markerElement.className = 'marker-class-lake';
     markerElement.innerText = "Лагерь 'Озерный' ";
 
     const marker = new YMapMarker(
@@ -7060,7 +7060,7 @@
     
     // метка лагеря парковый
     const markerElementSecond = document.createElement('div');
-    markerElementSecond.className = 'marker-class';
+    markerElementSecond.className = 'marker-class-park';
     markerElementSecond.innerText = "Лагерь 'Парковый'";
 
     const markerSecond = new YMapMarker(
@@ -7077,7 +7077,7 @@
     
     // метка лагеря дома на колесах
     const markerElementMotohome = document.createElement('div');
-    markerElementMotohome.className = 'marker-class';
+    markerElementMotohome.className = 'marker-class-motohome';
     markerElementMotohome.innerText = "Лагерь 'Дом на колесах'";
 
     const markerMotohome = new YMapMarker(
@@ -7091,6 +7091,9 @@
     );
 
     map.addChild(markerMotohome);
+
+
+
     
     
     
@@ -7105,5 +7108,21 @@
         
         // остальное
     
+        // метка лагеря дома на колесах
+    const markerElementRock = document.createElement('div');
+    markerElementRock.className = 'marker-class-Scene';
+    markerElementRock.innerText = "Сцена'";
+
+    const markerRock = new YMapMarker(
+      {
+        source: 'markerSource',
+        coordinates: [24.453809, 52.567655],
+        draggable: false,
+        mapFollowsOnDrag: false
+      },
+      markerElementRock
+    );
+
+    map.addChild(markerRock);
     
   }
