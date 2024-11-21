@@ -6883,8 +6883,7 @@ initMap(
       }));
       
       map.addChild(new YMapFeatureDataSource({id: 'markerSource', }));
-      
-      
+          
       
       map.addChild(new YMapLayer({source: 'markerSource', type: 'markers', zIndex: 2020}));
      
@@ -6900,7 +6899,7 @@ initMap(
         draggable: false,
         mapFollowsOnDrag: false
       },
-      markerElement
+      markerElementLogo
     );
 
     map.addChild(markerLogo);
