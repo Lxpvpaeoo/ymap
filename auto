@@ -2,7 +2,7 @@
 initMap(
     'map',
     {
-      center: [24.466836, 52.565951],
+      center: [24.456609, 52.564856],
       zoom: 15
     }
   );
@@ -10,7 +10,7 @@ initMap(
   initMap(
     'map-2',
     {
-      center: [24.467017, 52.563402],
+      center: [24.456609, 52.564856],
       zoom: 14
     }
   );
@@ -6882,281 +6882,24 @@ initMap(
 ]
           
       }));
-      map.addChild(new YMapFeatureDataSource({id: 'featureSource', }));
+      
       map.addChild(new YMapFeatureDataSource({id: 'markerSource', }));
-      
-      
-      map.addChild(new YMapLayer({source: 'featureSource', type: 'features', zIndex: 2010}));
       map.addChild(new YMapLayer({source: 'markerSource', type: 'markers', zIndex: 2020}));
-        
-        
-       // Зоны 
-        
-        // Зона лагеря озерный
-      const polygonFeature = new YMapFeature({
-        id: 'capm-lake',
-        source: 'featureSource',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [24.44938716722835,52.563488277116996],
-              [24.449762676490373,52.56247485864271],
-              [24.45078191591605,52.56245524385855],
-              [24.45230541063649,52.56138949405392],
-              [24.454268787635396,52.56167064530318],
-              [24.45225176645625,52.56359942480801]
-            ]
-          ]
-        },
-        style: {
-            stroke: [{width: 3, color: 'rgb(0, 229, 255)'}],
-            fill: 'rgba(0, 229, 255, 0.3)'
-        }
-      });
-
-      map.addChild(polygonFeature);
+       
+    // метка лагеря логотип фестиваля 
+    const markerElementLogo = document.createElement('div');
+    markerElementLogo.className = 'marker-class-logo';
     
-        // Зона лагеря парковый
-      const CampSecond = new YMapFeature({
-        id: 'capm-park',
-        source: 'featureSource',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [24.453585628732746,52.56276337268789],
-              [24.45614982055104,52.56269472136287],
-              [24.45619273589528,52.5632177763622],
-              [24.45355344222461,52.56329623407148],
-              [24.45305455134785,52.56325373616313]
-            ]
-          ]
-        },
-        style: {
-          stroke: [{width: 3, color: 'rgb(1, 190, 79)'}],
-          fill: 'rgba(1, 190, 79, 0.3)'
-        }
-      });
 
-      map.addChild(CampSecond);
-    
-    // Зона лагеря дом на колесах
-    const CampMotorhome = new YMapFeature({
-        id: 'motor-home',
-        source: 'featureSource',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [24.475705002082773,52.56898321079358],
-              [24.47576937509914,52.56800587579396],
-              [24.478247736228887,52.56797972606189],
-              [24.478363071216506,52.56890149465791]
-            ]
-          ]
-        },
-        style: {
-          stroke: [{width: 3, color: 'rgb(255, 119, 0)'}],
-          fill: 'rgba(255, 119, 0, 0.3)'
-        }
-      });
-
-      map.addChild(CampMotorhome);
-    
-    
-    // Зона концерта 
-    const polygonFest = new YMapFeature({
-        id: 'fest-zone',
-        source: 'featureSource',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [24.453286896036065,52.568124380864916],
-              [24.453533659265382,52.56703915676128],
-              [24.454917679117106,52.56726960570257],
-              [24.456339249894967,52.56737910938294],
-              [24.456368754194163,52.56746573150213],
-              [24.456966886804516,52.567539278451356],
-              [24.459506938741615,52.56792498930296],
-              [24.459858308122573,52.56786615227615],
-              [24.460384021089492,52.568676788794185],
-              [24.459386239335945,52.56859180341322]
-            ]
-          ]
-        },
-        style: {
-            stroke: [{width: 3, color: 'rgb(210, 210, 210)'}],
-            fill: 'rgba(0, 0, 0, 0.4)'
-        }
-      });
-
-      map.addChild(polygonFest);
-    
-    // Зона парка 
-    const polygonPark = new YMapFeature({
-        id: 'park-zone',
-        source: 'featureSource',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-                [24.452970899120412,52.56322967283152],
-                [24.453536341474166,52.56271760513618],
-                [24.456835458562484,52.562630973591354],
-                [24.45713318376313,52.56429001949852],
-                [24.457551608369418,52.56427367452623],
-                [24.457629392430874,52.564512310515184],
-                [24.45794052867661,52.56473786935914],
-                [24.458335820898732,52.56486790252914],
-                [24.45869523690673,52.56493001254571],
-                [24.459226314291673,52.56493655043705],
-                [24.45933628486124,52.56655628283483],
-                [24.459805671438804,52.56782783688437],
-                [24.45949185298406,52.56786869597653],
-                [24.45702422069036,52.567492790890384],
-                [24.456455592379157,52.56741924386329],
-                [24.456401948198817,52.56725417119877],
-                [24.455135945543848,52.56652032575292],
-                [24.453971866831385,52.565922126347765],
-                [24.453306678995677,52.56547755754508],
-                [24.45263076232392,52.56473877878405],
-                [24.45252347396334,52.56437919167561],
-                [24.452625397905894,52.56367308473411]
-            ]
-          ]
-        },
-        style: {
-            stroke: [{width: 3, color: 'rgb(210, 210, 210)'}],
-            fill: 'rgba(0, 0, 0, 0.4)'
-        }
-      });
-
-      map.addChild(polygonPark);
-     
-     
-     
-     
-     // метки инфраструктуры 
-    
-    // метка лагеря озерный
-    const markerElement = document.createElement('div');
-    markerElement.className = 'marker-class-lake';
-    markerElement.innerText = "Лагерь 'Озерный' ";
-
-    const marker = new YMapMarker(
+    const markerLogo = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.450899, 52.562274],
+        coordinates: [24.455869, 52.565915],
         draggable: false,
         mapFollowsOnDrag: false
       },
       markerElement
     );
 
-    map.addChild(marker);
-    
-    
-    // метка лагеря парковый
-    const markerElementSecond = document.createElement('div');
-    markerElementSecond.className = 'marker-class-park';
-    markerElementSecond.innerText = "Лагерь 'Парковый'";
-
-    const markerSecond = new YMapMarker(
-      {
-        source: 'markerSource',
-        coordinates: [24.453924, 52.563108],
-        draggable: false,
-        mapFollowsOnDrag: false
-      },
-      markerElementSecond
-    );
-
-    map.addChild(markerSecond);
-    
-    // метка лагеря дома на колесах
-    const markerElementMotohome = document.createElement('div');
-    markerElementMotohome.className = 'marker-class-motohome';
-    markerElementMotohome.innerText = "Лагерь 'Дом на колесах'";
-
-    const markerMotohome = new YMapMarker(
-      {
-        source: 'markerSource',
-        coordinates: [24.476479, 52.568779],
-        draggable: false,
-        mapFollowsOnDrag: false
-      },
-      markerElementMotohome
-    );
-
-    map.addChild(markerMotohome);
-
-
-
-    
-    
-    
-   
-        // парковки 
-        
-        // входы
-        
-        // сектора
-        // метка парковой зоны
-        const markerElementParkZone = document.createElement('div');
-        markerElementParkZone.className = 'marker-class-parkzone';
-        markerElementParkZone.innerText = "Парковая зона";
-    
-        const markerParkZone = new YMapMarker(
-          {
-            source: 'markerSource',
-            coordinates: [24.455309, 52.565287],
-            draggable: false,
-            mapFollowsOnDrag: false
-          },
-          markerElementParkZone
-        );
-    
-        map.addChild(markerParkZone);
-
-        //метка концертной зоны
-        const markerElementRockZone = document.createElement('div');
-        markerElementRockZone.className = 'marker-class-rockzone';
-        markerElementRockZone.innerText = "Концертная зона";
-    
-        const markerRockZone = new YMapMarker(
-          {
-            source: 'markerSource',
-            coordinates: [24.455488, 52.568196],
-            draggable: false,
-            mapFollowsOnDrag: false
-          },
-          markerElementRockZone
-        );
-    
-        map.addChild(markerRockZone);
-
-
-        // туалеты
-        
-        // остальное
-    
-        // метка сцены
-    const markerElementRock = document.createElement('div');
-    markerElementRock.className = 'marker-class-scene';
-    markerElementRock.innerText = "Сцена";
-
-    const markerRock = new YMapMarker(
-      {
-        source: 'markerSource',
-        coordinates: [24.454143, 52.567581],
-        draggable: false,
-        mapFollowsOnDrag: false
-      },
-      markerElementRock
-    );
-
-    map.addChild(markerRock);
-    
-  }
+    map.addChild(markerLogo);
+   }
