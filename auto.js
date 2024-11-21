@@ -6895,7 +6895,7 @@ initMap(
     const markerLogo = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.456239, 52.567129],
+        coordinates: [24.454616, 52.567788],
         draggable: false,
         mapFollowsOnDrag: false
       },
