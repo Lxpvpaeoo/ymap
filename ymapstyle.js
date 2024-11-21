@@ -6910,7 +6910,7 @@ initMap(
           ]
         },
         style: {
-            stroke: [{width: 2, color: 'rgb(0, 229, 255)'}],
+            stroke: [{width: 3, color: 'rgb(0, 229, 255)'}],
             fill: 'rgba(0, 229, 255, 0.3)'
         }
       });
@@ -6934,7 +6934,7 @@ initMap(
           ]
         },
         style: {
-          stroke: [{width: 2, color: 'rgb(1, 190, 79)'}],
+          stroke: [{width: 3, color: 'rgb(1, 190, 79)'}],
           fill: 'rgba(1, 190, 79, 0.3)'
         }
       });
@@ -6957,7 +6957,7 @@ initMap(
           ]
         },
         style: {
-          stroke: [{width: 4, color: 'rgb(255, 119, 0)'}],
+          stroke: [{width: 3, color: 'rgb(255, 119, 0)'}],
           fill: 'rgba(255, 119, 0, 0.3)'
         }
       });
@@ -6987,7 +6987,7 @@ initMap(
           ]
         },
         style: {
-            stroke: [{width: 2, color: 'rgb(210, 210, 210)'}],
+            stroke: [{width: 3, color: 'rgb(210, 210, 210)'}],
             fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
@@ -7028,7 +7028,7 @@ initMap(
           ]
         },
         style: {
-            stroke: [{width: 2, color: 'rgb(210, 210, 210)'}],
+            stroke: [{width: 3, color: 'rgb(210, 210, 210)'}],
             fill: 'rgba(0, 0, 0, 0.4)'
         }
       });
