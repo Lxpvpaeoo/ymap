@@ -1,4 +1,3 @@
-
 initMap(
     'map',
     {
@@ -6884,8 +6883,11 @@ initMap(
       }));
       
       map.addChild(new YMapFeatureDataSource({id: 'markerSource', }));
+      
+      
+      
       map.addChild(new YMapLayer({source: 'markerSource', type: 'markers', zIndex: 2020}));
-       
+     
     // метка лагеря логотип фестиваля 
     const markerElementLogo = document.createElement('div');
     markerElementLogo.className = 'marker-class-logo';
@@ -6894,12 +6896,13 @@ initMap(
     const markerLogo = new YMapMarker(
       {
         source: 'markerSource',
-        coordinates: [24.455869, 52.565915],
+        coordinates: [24.456239, 52.567129],
         draggable: false,
         mapFollowsOnDrag: false
       },
-      markerElementLogo
+      markerElement
     );
 
     map.addChild(markerLogo);
-   }
+   
+  }
